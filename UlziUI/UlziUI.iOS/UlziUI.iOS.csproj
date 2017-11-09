@@ -1,0 +1,2094 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Xamarin.Forms.2.4.0.280\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.280\build\netstandard1.0\Xamarin.Forms.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C502185A-D686-4523-BA3E-167190234C1A}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>UlziUI.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>UlziUI.iOS</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\AppButtonRenderer.cs" />
+    <Compile Include="Renderers\AppDatePickerRenderer.cs" />
+    <Compile Include="Renderers\AppEditorRenderer.cs" />
+    <Compile Include="Renderers\AppEmergencyRenderer.cs" />
+    <Compile Include="Renderers\AppEntryRenderer.cs" />
+    <Compile Include="Renderers\AppEnumSelectorRenderer.cs" />
+    <Compile Include="Renderers\AppImageRenderer.cs" />
+    <Compile Include="Renderers\AppLabelRenderer.cs" />
+    <Compile Include="Renderers\AppLongTapViewRenderer.cs" />
+    <Compile Include="Renderers\AppNumberSelectorRenderer.cs" />
+    <Compile Include="Renderers\AppPanViewRenderer.cs" />
+    <Compile Include="Renderers\AppPickerRenderer.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork@2x" />
+    <None Include="packages.config" />
+    <BundleResource Include="Resources\Fonts\Quicksand-Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\Quicksand-Light.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\Quicksand-Medium.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\Quicksand-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\WorkSans-Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\WorkSans-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.280\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.280\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.280\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.4.0.280\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Images.xcassets\add_photo.imageset\" />
+    <Folder Include="Resources\Images.xcassets\appbutton_gold.imageset\" />
+    <Folder Include="Resources\Images.xcassets\box_checked.imageset\" />
+    <Folder Include="Resources\Images.xcassets\box_unchecked.imageset\" />
+    <Folder Include="Resources\Images.xcassets\checked_red.imageset\" />
+    <Folder Include="Resources\Images.xcassets\checked_yellow.imageset\" />
+    <Folder Include="Resources\Images.xcassets\clock_gray.imageset\" />
+    <Folder Include="Resources\Images.xcassets\follow_gray.imageset\" />
+    <Folder Include="Resources\Images.xcassets\gear_white.imageset\" />
+    <Folder Include="Resources\Images.xcassets\geozone_point.imageset\" />
+    <Folder Include="Resources\Images.xcassets\gift_green.imageset\" />
+    <Folder Include="Resources\Images.xcassets\interval.imageset\" />
+    <Folder Include="Resources\Images.xcassets\lasso.imageset\" />
+    <Folder Include="Resources\Images.xcassets\left_white.imageset\" />
+    <Folder Include="Resources\Images.xcassets\location_white.imageset\" />
+    <Folder Include="Resources\Images.xcassets\page_dot_gray.imageset\" />
+    <Folder Include="Resources\Images.xcassets\page_dot_green.imageset\" />
+    <Folder Include="Resources\Images.xcassets\phone_white.imageset\" />
+    <Folder Include="Resources\Images.xcassets\plus_white.imageset\" />
+    <Folder Include="Resources\Images.xcassets\question_yellow.imageset\" />
+    <Folder Include="Resources\Images.xcassets\rigth_silver.imageset\" />
+    <Folder Include="Resources\Images.xcassets\route_point.imageset\" />
+    <Folder Include="Resources\Images.xcassets\search_location.imageset\" />
+    <Folder Include="Resources\Images.xcassets\waypoint_delete_red.imageset\" />
+    <Folder Include="Resources\Images.xcassets\waypoint_erase_gray.imageset\" />
+    <Folder Include="Resources\Images.xcassets\waypoint_erase_red.imageset\" />
+    <Folder Include="Resources\Images.xcassets\waypoint_redo_green.imageset\" />
+    <Folder Include="Resources\Images.xcassets\waypoint_selected.imageset\" />
+    <Folder Include="Resources\Images.xcassets\waypoint_undo_green.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\background%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\background-568h%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\background-667h%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\background-736h%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash-568h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash-568h%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash-667h%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\splash-736h%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\account_gray.imageset\account_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\account_gray.imageset\account_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\account_gray.imageset\account_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\account_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\account_green.imageset\account_green.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\account_green.imageset\account_green@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\account_green.imageset\account_green@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\account_green.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\add_tag_gray.imageset\add_tag_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\add_tag_gray.imageset\add_tag_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\add_tag_gray.imageset\add_tag_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\add_tag_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_edit_route.imageset\appbutton_edit_route.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_edit_route.imageset\appbutton_edit_route@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_edit_route.imageset\appbutton_edit_route@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_edit_route.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_facebook.imageset\appbutton_facebook.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_facebook.imageset\appbutton_facebook@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_facebook.imageset\appbutton_facebook@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_facebook.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_free.imageset\appbutton_free.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_free.imageset\appbutton_free@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_free.imageset\appbutton_free@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_free.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_silver.imageset\appbutton_silver.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_silver.imageset\appbutton_silver@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_silver.imageset\appbutton_silver@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_silver.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon-29.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon-29@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon-29@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon-40@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon-40@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon-60@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon-60@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow.imageset\arrow.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow.imageset\arrow@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow.imageset\arrow@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_forward.imageset\arrow_forward.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_forward.imageset\arrow_forward@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_forward.imageset\arrow_forward@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_forward.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_left.imageset\arrow_left.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_left.imageset\arrow_left@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_left.imageset\arrow_left@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_left.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_left_slight.imageset\arrow_left_slight.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_left_slight.imageset\arrow_left_slight@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_left_slight.imageset\arrow_left_slight@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_left_slight.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_right.imageset\arrow_right.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_right.imageset\arrow_right@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_right.imageset\arrow_right@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_right.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_right_slight.imageset\arrow_right_slight.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_right_slight.imageset\arrow_right_slight@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_right_slight.imageset\arrow_right_slight@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\arrow_right_slight.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\back.imageset\back.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\back.imageset\back@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\back.imageset\back@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\back.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\backspace.imageset\backspace.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\backspace.imageset\backspace@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\backspace.imageset\backspace@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\backspace.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\basket_red.imageset\basket_red.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\basket_red.imageset\basket_red@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\basket_red.imageset\basket_red@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\basket_red.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\bell_gray.imageset\bell_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\bell_gray.imageset\bell_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\bell_gray.imageset\bell_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\bell_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\bell_green.imageset\bell_green.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\bell_green.imageset\bell_green@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\bell_green.imageset\bell_green@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\bell_green.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\button_settings.imageset\button_settings.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\button_settings.imageset\button_settings@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\button_settings.imageset\button_settings@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\button_settings.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\button_settings_bs.imageset\button_settings_bs.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\button_settings_bs.imageset\button_settings_bs@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\button_settings_bs.imageset\button_settings_bs@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\button_settings_bs.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\camera_gray.imageset\camera_grey.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\camera_gray.imageset\camera_grey@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\camera_gray.imageset\camera_grey@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\camera_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\camera_red.imageset\camera_red.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\camera_red.imageset\camera_red@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\camera_red.imageset\camera_red@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\camera_red.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\checked_green.imageset\checked_green.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\checked_green.imageset\checked_green@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\checked_green.imageset\checked_green@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\checked_green.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\close_gray.imageset\close_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\close_gray.imageset\close_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\close_gray.imageset\close_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\close_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\contact_gray.imageset\contact_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\contact_gray.imageset\contact_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\contact_gray.imageset\contact_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\contact_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\cut.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\cut.imageset\cut.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\cut.imageset\cut@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\cut.imageset\cut@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\cut_red.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\cut_red.imageset\cut_red.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\cut_red.imageset\cut_red@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\cut_red.imageset\cut_red@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\default_user.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\default_user.imageset\default_user.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\default_user.imageset\default_user@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\default_user.imageset\default_user@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\email_green.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\email_green.imageset\email_green.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\email_green.imageset\email_green@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\email_green.imageset\email_green@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\email_red.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\email_red.imageset\email_red.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\email_red.imageset\email_red@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\email_red.imageset\email_red@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\email_white.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\email_white.imageset\email_white.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\email_white.imageset\email_white@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\email_white.imageset\email_white@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\emergency.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\emergency.imageset\emergency.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\emergency.imageset\emergency@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\emergency.imageset\emergency@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\facebook.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\facebook.imageset\facebook.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\facebook.imageset\facebook@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\facebook.imageset\facebook@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\facebook_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\facebook_gray.imageset\facebook_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\facebook_gray.imageset\facebook_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\facebook_gray.imageset\facebook_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\facebook_white.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\facebook_white.imageset\facebook_white.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\facebook_white.imageset\facebook_white@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\facebook_white.imageset\facebook_white@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\frequen.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\frequen.imageset\frequen.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\frequen.imageset\frequen@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\frequen.imageset\frequen@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gear_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gear_gray.imageset\gear_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gear_gray.imageset\gear_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gear_gray.imageset\gear_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gift_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gift_gray.imageset\gift_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gift_gray.imageset\gift_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gift_gray.imageset\gift_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gift_white.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gift_white.imageset\gift_white.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gift_white.imageset\gift_white@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gift_white.imageset\gift_white@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\home.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\home.imageset\home.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\home.imageset\home@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\home.imageset\home@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\home_black.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\home_black.imageset\home_black.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\home_black.imageset\home_black@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\home_black.imageset\home_black@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\home_button.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\home_button.imageset\home_button.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\home_button.imageset\home_button@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\home_button.imageset\home_button@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\home_selected.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\home_selected.imageset\home_selected.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\home_selected.imageset\home_selected@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\home_selected.imageset\home_selected@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\instagram.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\instagram.imageset\instagram.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\instagram.imageset\instagram@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\instagram.imageset\instagram@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\instagram_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\instagram_gray.imageset\instagram_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\instagram_gray.imageset\instagram_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\instagram_gray.imageset\instagram_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\instructions.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\instructions.imageset\instructions.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\instructions.imageset\instructions@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\instructions.imageset\instructions@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImages.launchimage\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\left_black.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\left_black.imageset\left_black.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\left_black.imageset\left_black@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\left_black.imageset\left_black@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\left_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\left_gray.imageset\left_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\left_gray.imageset\left_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\left_gray.imageset\left_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\linkedin_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\linkedin_gray.imageset\linkedin_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\linkedin_gray.imageset\linkedin_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\linkedin_gray.imageset\linkedin_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\location.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\location.imageset\location.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\location.imageset\location@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\location.imageset\location@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\lock_red.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\lock_red.imageset\lock_red.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\lock_red.imageset\lock_red@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\lock_red.imageset\lock_red@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\lock_white.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\lock_white.imageset\lock_white.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\lock_white.imageset\lock_white@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\lock_white.imageset\lock_white@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\logo.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\logo.imageset\logo.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\logo.imageset\logo@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\logo.imageset\logo@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\mail_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\mail_gray.imageset\mail_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\mail_gray.imageset\mail_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\mail_gray.imageset\mail_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\map_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\map_gray.imageset\map_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\map_gray.imageset\map_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\map_gray.imageset\map_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\map_green.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\map_green.imageset\map_green.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\map_green.imageset\map_green@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\map_green.imageset\map_green@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\menu_background.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\menu_background.imageset\menu_background.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\menu_background.imageset\menu_background@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\menu_background.imageset\menu_background@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\message_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\message_gray.imageset\message_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\message_gray.imageset\message_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\message_gray.imageset\message_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\minus_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\minus_gray.imageset\minus_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\minus_gray.imageset\minus_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\minus_gray.imageset\minus_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_alert.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_alert.imageset\notification_alert.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_alert.imageset\notification_alert@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_alert.imageset\notification_alert@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_breaking_news.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_breaking_news.imageset\notification_breaking_news.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_breaking_news.imageset\notification_breaking_news@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_breaking_news.imageset\notification_breaking_news@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_help.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_help.imageset\notification_help.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_help.imageset\notification_help@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_help.imageset\notification_help@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_safety_tip.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_safety_tip.imageset\notification_safety_tip.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_safety_tip.imageset\notification_safety_tip@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_safety_tip.imageset\notification_safety_tip@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_verify_email.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_verify_email.imageset\notification_verify_email.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_verify_email.imageset\notification_verify_email@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\notification_verify_email.imageset\notification_verify_email@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\oval_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\oval_gray.imageset\oval_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\oval_gray.imageset\oval_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\oval_gray.imageset\oval_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\oval_white.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\oval_white.imageset\oval_white.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\oval_white.imageset\oval_white@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\oval_white.imageset\oval_white@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\padding.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\padding.imageset\padding.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\padding.imageset\padding@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\padding.imageset\padding@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pause_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pause_gray.imageset\pause_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pause_gray.imageset\pause_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pause_gray.imageset\pause_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pause_green.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pause_green.imageset\pause_green.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pause_green.imageset\pause_green@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pause_green.imageset\pause_green@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pen_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pen_gray.imageset\pen_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pen_gray.imageset\pen_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pen_gray.imageset\pen_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pen_green.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pen_green.imageset\pen_green.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pen_green.imageset\pen_green@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pen_green.imageset\pen_green@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\phone_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\phone_gray.imageset\phone_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\phone_gray.imageset\phone_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\phone_gray.imageset\phone_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pinterest_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pinterest_gray.imageset\pinterest_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pinterest_gray.imageset\pinterest_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\pinterest_gray.imageset\pinterest_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\place_ballon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\place_ballon.imageset\place_ballon.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\place_ballon.imageset\place_ballon@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\place_ballon.imageset\place_ballon@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\place_pin.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\place_pin.imageset\place_pin.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\place_pin.imageset\place_pin@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\place_pin.imageset\place_pin@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\plus_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\plus_gray.imageset\plus_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\plus_gray.imageset\plus_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\plus_gray.imageset\plus_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\premium_green.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\premium_green.imageset\premium_green.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\premium_green.imageset\premium_green@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\premium_green.imageset\premium_green@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\profile_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\profile_gray.imageset\profile_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\profile_gray.imageset\profile_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\profile_gray.imageset\profile_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\redo.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\redo.imageset\redo.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\redo.imageset\redo@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\redo.imageset\redo@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\remove.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\remove.imageset\remove.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\remove.imageset\remove@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\remove.imageset\remove@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\right_black.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\right_black.imageset\right_black.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\right_black.imageset\right_black@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\right_black.imageset\right_black@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\right_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\right_gray.imageset\right_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\right_gray.imageset\right_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\right_gray.imageset\right_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\right_white.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\right_white.imageset\right_white.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\right_white.imageset\right_white@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\right_white.imageset\right_white@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\rigth_silver.imageset\rigth_silver.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\rigth_silver.imageset\rigth_silver@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\rigth_silver.imageset\rigth_silver@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_point.imageset\route_point.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_point.imageset\route_point@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_point.imageset\route_point@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_point_red.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_point_red.imageset\route_point_red.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_point_red.imageset\route_point_red@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_point_red.imageset\route_point_red@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector.imageset\route_type_selector.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector.imageset\route_type_selector@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector.imageset\route_type_selector@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_background.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_background.imageset\route_type_selector_background.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_background.imageset\route_type_selector_background@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_background.imageset\route_type_selector_background@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_bike_black.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_bike_black.imageset\route_type_selector_bike_black.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_bike_black.imageset\route_type_selector_bike_black@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_bike_black.imageset\route_type_selector_bike_black@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_bike_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_bike_gray.imageset\route_type_selector_bike_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_bike_gray.imageset\route_type_selector_bike_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_bike_gray.imageset\route_type_selector_bike_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_drive_black.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_drive_black.imageset\route_type_selector_drive_black.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_drive_black.imageset\route_type_selector_drive_black@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_drive_black.imageset\route_type_selector_drive_black@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_drive_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_drive_gray.imageset\route_type_selector_drive_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_drive_gray.imageset\route_type_selector_drive_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_drive_gray.imageset\route_type_selector_drive_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_walk_black.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_walk_black.imageset\route_type_selector_walk_black.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_walk_black.imageset\route_type_selector_walk_black@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_walk_black.imageset\route_type_selector_walk_black@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_walk_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_walk_gray.imageset\route_type_selector_walk_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_walk_gray.imageset\route_type_selector_walk_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_type_selector_walk_gray.imageset\route_type_selector_walk_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\search.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\search.imageset\search.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\search.imageset\search@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\search.imageset\search@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\selector_left.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\selector_left.imageset\selector_left.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\selector_left.imageset\selector_left@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\selector_left.imageset\selector_left@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\selector_right.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\selector_right.imageset\selector_right.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\selector_right.imageset\selector_right@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\selector_right.imageset\selector_right@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\settings_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\settings_gray.imageset\settings_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\settings_gray.imageset\settings_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\settings_gray.imageset\settings_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\share_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\share_gray.imageset\share_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\share_gray.imageset\share_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\slide_to_activate.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\slide_to_activate.imageset\slide_to_activate.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\slide_to_activate.imageset\slide_to_activate@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\slide_to_activate.imageset\slide_to_activate@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\star_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\star_gray.imageset\star_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\star_gray.imageset\star_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\star_gray.imageset\star_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\star_green.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\star_green.imageset\star_green.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\star_green.imageset\star_green@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\star_green.imageset\star_green@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\switch_off.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\switch_off.imageset\switch_off.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\switch_off.imageset\switch_off@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\switch_off.imageset\switch_off@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\switch_on.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\switch_on.imageset\switch_on.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\switch_on.imageset\switch_on@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\switch_on.imageset\switch_on@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\test.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\test.imageset\test.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\test.imageset\test@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\test.imageset\test@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\test_large.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\test_large.imageset\test_large.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\test_large.imageset\test_large@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\test_large.imageset\test_large@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\test_selected.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\test_selected.imageset\test_selected.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\test_selected.imageset\test_selected@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\test_selected.imageset\test_selected@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\text_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\text_gray.imageset\text_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\text_gray.imageset\text_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\text_gray.imageset\text_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\trip_bicycling.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\trip_bicycling.imageset\trip_bicycling.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\trip_bicycling.imageset\trip_bicycling@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\trip_bicycling.imageset\trip_bicycling@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\trip_driving.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\trip_driving.imageset\trip_driving.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\trip_driving.imageset\trip_driving@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\trip_driving.imageset\trip_driving@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\trip_walking.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\trip_walking.imageset\trip_walking.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\trip_walking.imageset\trip_walking@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\trip_walking.imageset\trip_walking@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\twitter.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\twitter.imageset\twitter.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\twitter.imageset\twitter@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\twitter.imageset\twitter@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\twitter_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\twitter_gray.imageset\twitter_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\twitter_gray.imageset\twitter_gray@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\twitter_gray.imageset\twitter_gray@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\unchecked.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\unchecked.imageset\unchecked.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\unchecked.imageset\unchecked@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\unchecked.imageset\unchecked@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\undo.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\undo.imageset\undo.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\undo.imageset\undo@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\undo.imageset\undo@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\upgrade_selector_left.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\upgrade_selector_left.imageset\upgrade_selector_left.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\upgrade_selector_left.imageset\upgrade_selector_left@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\upgrade_selector_left.imageset\upgrade_selector_left@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\upgrade_selector_right.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\upgrade_selector_right.imageset\upgrade_selector_right.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\upgrade_selector_right.imageset\upgrade_selector_right@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\upgrade_selector_right.imageset\upgrade_selector_right@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\user_ballon_red.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\user_ballon_red.imageset\user_ballon_red.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\user_ballon_red.imageset\user_ballon_red@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\user_ballon_red.imageset\user_ballon_red@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\user_ballon_white.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\user_ballon_white.imageset\user_ballon_white.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\user_ballon_white.imageset\user_ballon_white@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\user_ballon_white.imageset\user_ballon_white@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\user_ballon_yellow.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\user_ballon_yellow.imageset\user_ballon_yellow.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\user_ballon_yellow.imageset\user_ballon_yellow@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\user_ballon_yellow.imageset\user_ballon_yellow@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\width_selector_background.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\width_selector_background.imageset\width_selector_background.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\width_selector_background.imageset\width_selector_background@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\width_selector_background.imageset\width_selector_background@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\width_selector_pointer.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\route_point.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\rigth_silver.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\width_selector_pointer.imageset\width_selector_pointer.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\width_selector_pointer.imageset\width_selector_pointer@2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\width_selector_pointer.imageset\width_selector_pointer@3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_gold.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_gold.imageset\appbutton_gold.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_gold.imageset\appbutton_gold%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\appbutton_gold.imageset\appbutton_gold%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gear_white.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gear_white.imageset\gear_white.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gear_white.imageset\gear_white%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gear_white.imageset\gear_white%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_erase_red.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_erase_red.imageset\waypoint_erase_red.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_erase_red.imageset\waypoint_erase_red%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_erase_red.imageset\waypoint_erase_red%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_erase_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_erase_gray.imageset\eaypoint_erase_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_erase_gray.imageset\eaypoint_erase_gray%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_erase_gray.imageset\eaypoint_erase_gray%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_erase_gray.imageset\waypoint_erase_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_erase_gray.imageset\waypoint_erase_gray%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_erase_gray.imageset\waypoint_erase_gray%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_delete_red.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_delete_red.imageset\waypoint_delete_red.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_delete_red.imageset\waypoint_delete_red%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_delete_red.imageset\waypoint_delete_red%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_undo_green.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_undo_green.imageset\waypoint_undo_green.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_undo_green.imageset\waypoint_undo_green%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_undo_green.imageset\waypoint_undo_green%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_redo_green.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_redo_green.imageset\waypoint_redo_green.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_redo_green.imageset\waypoint_redo_green%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_redo_green.imageset\waypoint_redo_green%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_selected.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_selected.imageset\waypoint_selected.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_selected.imageset\waypoint_selected%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\waypoint_selected.imageset\waypoint_selected%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\geozone_point.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\geozone_point.imageset\geozone_point.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\geozone_point.imageset\geozone_point%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\geozone_point.imageset\geozone_point%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\search_location.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\search_location.imageset\search_location.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\search_location.imageset\search_location%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\search_location.imageset\search_location%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon-76%40x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon-152%40x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\icon-167%40x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\left_white.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\left_white.imageset\left_white.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\left_white.imageset\left_white%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\left_white.imageset\left_white%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\add_photo.imageset\add_photo.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\add_photo.imageset\add_photo%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\add_photo.imageset\add_photo%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\add_photo.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\page_dot_green.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\page_dot_green.imageset\page_dot_green.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\page_dot_green.imageset\page_dot_green%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\page_dot_green.imageset\page_dot_green%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\page_dot_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\page_dot_gray.imageset\page_dot_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\page_dot_gray.imageset\page_dot_gray%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\page_dot_gray.imageset\page_dot_gray%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gift_green.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gift_green.imageset\gift_green.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gift_green.imageset\gift_green%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\gift_green.imageset\gift_green%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\checked_red.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\checked_red.imageset\checked_red.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\checked_red.imageset\checked_red%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\checked_red.imageset\checked_red%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\checked_yellow.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\checked_yellow.imageset\checked_yellow.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\checked_yellow.imageset\checked_yellow%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\checked_yellow.imageset\checked_yellow%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\phone_white.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\phone_white.imageset\phone_white.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\phone_white.imageset\phone_white%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\phone_white.imageset\phone_white%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\location_white.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\location_white.imageset\location_white.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\location_white.imageset\location_white%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\location_white.imageset\location_white%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\box_checked.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\box_checked.imageset\box_checked.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\box_checked.imageset\box_checked%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\box_checked.imageset\box_checked%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\box_unchecked.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\box_unchecked.imageset\box_unchecked.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\box_unchecked.imageset\box_unchecked%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\box_unchecked.imageset\box_unchecked%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\follow_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\follow_gray.imageset\follow_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\follow_gray.imageset\follow_gray%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\follow_gray.imageset\follow_gray%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\share_gray.imageset\share_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\clock_gray.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\clock_gray.imageset\clock_gray.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\clock_gray.imageset\clock_gray%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\clock_gray.imageset\clock_gray%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\question_yellow.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\question_yellow.imageset\question_yellow.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\question_yellow.imageset\question_yellow%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\question_yellow.imageset\question_yellow%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\plus_white.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\plus_white.imageset\plus_white.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\plus_white.imageset\plus_white%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\plus_white.imageset\plus_white%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\lasso.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\lasso.imageset\lasso.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\lasso.imageset\lasso%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\lasso.imageset\lasso%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\interval.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\interval.imageset\interval.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\interval.imageset\interval%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\interval.imageset\interval%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\label_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\emergency_changed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu_background_changed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\starred_place.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\location_changed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\plus_changed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\map_backgroud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\left_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\plus_changed_white.png" />
+  </ItemGroup>
+  <Import Project="..\UlziUI\UlziUI.projitems" Label="Shared" Condition="Exists('..\UlziUI\UlziUI.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.4.0.280\build\netstandard1.0\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.4.0.280\build\netstandard1.0\Xamarin.Forms.props'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.4.0.280\build\netstandard1.0\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.4.0.280\build\netstandard1.0\Xamarin.Forms.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\Xamarin.Forms.2.4.0.280\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.280\build\netstandard1.0\Xamarin.Forms.targets')" />
+</Project>

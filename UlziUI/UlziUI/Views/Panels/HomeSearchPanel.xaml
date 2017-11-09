@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:Panel 
+    xmlns:local="clr-namespace:UlziUI.Views.Panels;assembly=UlziUI" 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="UlziUI.Views.Panels.HomeSearchPanel"
+    xmlns:controls="clr-namespace:UlziUI.Controls"
+    BackgroundColor="Transparent">
+	<local:Panel.Content>
+        <StackLayout HorizontalOptions = "FillAndExpand"
+                    VerticalOptions = "FillAndExpand" 
+                    Spacing = "0"
+            Margin = "0, 0, 0, 0"
+            BackgroundColor = "Transparent">
+
+            <!--Navigation Bar with Two buttons and an Entry-->
+            <StackLayout Orientation = "Horizontal"
+                      HeightRequest = "80" 
+                    HorizontalOptions = "FillAndExpand"
+                    Margin = "0" Padding = "0">
+
+                
+                <Frame BackgroundColor = "White" 
+                    VerticalOptions = "FillAndExpand"
+                    HorizontalOptions = "FillAndExpand"
+                    HasShadow = "false"
+                    CornerRadius = "2"
+                    Padding = "5, 0, 5, 0"
+                    Margin = "10, 30, 10, 10">        
+
+                    <!--//TODO: Use Grid Instead of Stack-->
+                    <StackLayout VerticalOptions = "FillAndExpand"
+                    HorizontalOptions = "FillAndExpand" 
+                        Orientation = "Horizontal" 
+                        BackgroundColor = "White" Spacing = "5" Padding = "0">
+                        
+                        <controls:AppImage 
+                            WidthRequest = "20"
+                            VerticalOptions = "FillAndExpand"
+                            Source = "left"
+                            BackgroundColor = "Transparent"/>
+
+                        <controls:AppEntry
+                            VerticalOptions = "FillAndExpand"
+                            HorizontalOptions = "FillAndExpand"/>
+
+                        <controls:AppImage 
+                            Source = "mic" 
+                            VerticalOptions = "FillAndExpand" 
+                            WidthRequest = "20"
+                            BackgroundColor = "Transparent"/>
+                    </StackLayout>
+
+                </Frame>
+            </StackLayout>
+
+            <!--//Entire view below the Navigation bar-->
+            <ScrollView HorizontalOptions = "FillAndExpand"
+                VerticalOptions = "FillAndExpand"
+                BackgroundColor = "Transparent"
+                Orientation = "Vertical">
+
+                <!--//Container layout to hold all the view-->
+                <StackLayout VerticalOptions = "FillAndExpand"
+                    HorizontalOptions = "FillAndExpand"
+                    Padding = "0" Margin = "0" Spacing = "0">
+
+                    <!--Horizontal ScrollView-->
+                    <Frame HorizontalOptions = "FillAndExpand"
+                        VerticalOptions = "Start"
+                        HeightRequest = "100"
+                        HasShadow = "false"
+                        Margin = "0"
+                        Padding = "0">
+                        <ScrollView HorizontalOptions = "FillAndExpand"
+                            HeightRequest = "100"
+                            Orientation = "Horizontal"
+                            Margin = "0" Padding = "0">   
+                            <StackLayout x:Name = "ContactListLayout"
+                                HorizontalOptions = "FillAndExpand"
+                                VerticalOptions = "Fill"
+                                Orientation = "Horizontal"
+                                Spacing = "5" Margin = "0" Padding = "5">
+                               
+                            </StackLayout>
+                        </ScrollView>
+                    </Frame>
+
+                    <!--//Current Location button-->
+                    <Frame HorizontalOptions = "FillAndExpand"
+                        VerticalOptions = "Fill"
+                        Margin = "10, 10, 10, 5" Padding = "10, 5, 10, 5"
+                        BackgroundColor = "White"
+                        HasShadow = "false"
+                        OutlineColor = "#C9C9CF" CornerRadius = "2">
+                        <StackLayout x:Name = "CurrentLocationLayout" 
+                            HorizontalOptions = "FillAndExpand"
+                            VerticalOptions = "Fill">
+                            <controls:AppHorizontalButton BindingContext = "{Binding CurrentLocation}" HorizontalOptions = "FillAndExpand" 
+                            VerticalOptions = "Fill"
+                            Text = "Current Location" 
+                            Image = "map_gray"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <!--//Starred Places-->
+                    <Frame HorizontalOptions = "FillAndExpand"
+                        VerticalOptions = "Fill"
+                        Margin = "10, 5, 10, 5" Padding = "10, 5, 10, 5"
+                        BackgroundColor = "White" HasShadow = "false"
+                        OutlineColor = "#C9C9CF" CornerRadius = "2">
+                        <StackLayout 
+                            x:Name = "StarredLocationLayout"
+                            HorizontalOptions = "FillAndExpand"
+                            VerticalOptions = "Fill">
+                        
+                        </StackLayout>
+                    </Frame>
+
+                    <!--//Recent Places-->
+                    <!--Margin intentionally kept 100-->
+                    <Frame HorizontalOptions = "FillAndExpand"
+                        VerticalOptions = "Fill"
+                        Margin = "10, 5, 10, 100" Padding = "10, 5, 10, 5" 
+                        BackgroundColor = "White" HasShadow = "false"
+                        OutlineColor = "#C9C9CF" CornerRadius = "2">
+                         <StackLayout 
+                            x:Name = "RecentLocationLayout"
+                            HorizontalOptions = "FillAndExpand"
+                            VerticalOptions = "Fill"
+                            Spacing = "0">
+                    
+                        </StackLayout>
+                    </Frame>
+                    
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+	</local:Panel.Content>
+</local:Panel>

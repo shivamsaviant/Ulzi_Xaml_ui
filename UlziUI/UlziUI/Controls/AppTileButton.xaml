@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="UlziUI.Controls.AppTileButton"
+    xmlns:controls="clr-namespace:UlziUI.Controls"
+    x:Name = "Self">
+	<ContentView.Content>
+         <StackLayout HorizontalOptions = "FillAndExpand"
+                    VerticalOptions = "CenterAndExpand" 
+                    Spacing = "0"
+                    Margin = "5, 5, 5, 5">
+            <Frame x:Name = "ButtonImageFrame" HorizontalOptions = "Center"
+                    WidthRequest = "56"
+                    VerticalOptions = "CenterAndExpand" 
+                    HeightRequest = "56"
+                    BackgroundColor = "Gray" 
+                    CornerRadius = "28" Padding = "0" 
+                    IsClippedToBounds="true" HasShadow="false">
+                 <controls:AppImage x:Name = "ButtonImage" Margin = "0"  HorizontalOptions = "FillAndExpand"
+                    VerticalOptions = "FillAndExpand" Source = "{Binding Image, Source={x:Reference Self}}"/>
+             
+            </Frame>
+
+            <controls:AppLabel x:Name = "ButtonText" HorizontalOptions = "FillAndExpand" Text = "{Binding Text, Source={x:Reference Self}}}"
+            VerticalOptions = "Fill" LineBreakMode="WordWrap" VerticalTextAlignment = "Center" HorizontalTextAlignment = "Center"/>
+           
+        </StackLayout>
+	</ContentView.Content>
+</ContentView>

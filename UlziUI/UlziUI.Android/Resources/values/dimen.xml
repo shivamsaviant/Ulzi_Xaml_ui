@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+  <dimen name="map_annotation_font_size">20dp</dimen>
+</resources>

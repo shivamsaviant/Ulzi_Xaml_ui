@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="UlziUI.Controls.AppHorizontalButton"
+    xmlns:controls="clr-namespace:UlziUI.Controls"
+    x:Name = "Self">
+	<ContentView.Content>
+        <StackLayout HorizontalOptions = "FillAndExpand"
+                    VerticalOptions = "FillAndExpand" 
+                    Spacing = "5" Padding = "5" Orientation = "Horizontal">
+           
+         
+            <controls:AppImage Margin = "0"  x:Name = "ButtonImage" 
+            VerticalOptions = "CenterAndExpand" 
+            WidthRequest = "30" 
+            HeightRequest = "30"    
+            BackgroundColor = "Transparent"
+            Aspect="AspectFit"
+            Source="{Binding Image, Source={x:Reference Self}}"
+            StrokeColor = "Black"
+            StrokeWidth= "{Binding BorderWidth, Source={x:Reference Self}}"
+            />
+         
+
+            <controls:AppLabel x:Name = "ButtonText" 
+            Text = "{Binding Text, Source={x:Reference Self}}"
+            HorizontalOptions = "FillAndExpand" 
+            VerticalOptions="Fill" 
+            VerticalTextAlignment = "Center" 
+            HorizontalTextAlignment = "Start"/>
+        </StackLayout>
+	</ContentView.Content>
+</ContentView>

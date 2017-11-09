@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="X5k-f2-b5h">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gAE-YM-kbH">
+            <objects>
+                <viewController id="X5k-f2-b5h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="245"/>
+                        <viewControllerLayoutGuide type="bottom" id="246"/>
+                    </layoutGuides>
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-736h.png" id="47">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </imageView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-xm-WK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="349" y="339"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splash-736h.png" width="414" height="736"/>
+        <image name="background.png" width="320" height="480"/>
+        <image name="background-568h.png" width="320" height="568"/>
+        <image name="background-667h.png" width="375" height="667"/>
+        <image name="background-736h.png" width="414" height="736"/>
+        <image name="splash.png" width="320" height="480"/>
+        <image name="splash-568h.png" width="320" height="568"/>
+        <image name="splash-667h.png" width="375" height="667"/>
+        <image name="account_gray" width="50" height="35"/>
+        <image name="account_green" width="50" height="35"/>
+        <image name="add_tag_gray" width="28" height="28"/>
+        <image name="appbutton_edit_route" width="73" height="73"/>
+        <image name="appbutton_facebook" width="136" height="24"/>
+        <image name="appbutton_free" width="136" height="24"/>
+        <image name="appbutton_silver" width="136" height="24"/>
+        <image name="arrow" width="28" height="28"/>
+        <image name="arrow_forward" width="28" height="28"/>
+        <image name="arrow_left" width="28" height="28"/>
+        <image name="arrow_left_slight" width="28" height="28"/>
+        <image name="arrow_right" width="28" height="28"/>
+        <image name="arrow_right_slight" width="28" height="28"/>
+        <image name="back" width="17" height="28"/>
+        <image name="backspace" width="28" height="28"/>
+        <image name="basket_red" width="28" height="28"/>
+        <image name="bell_gray" width="39" height="51"/>
+        <image name="bell_green" width="39" height="51"/>
+        <image name="button_settings" width="250" height="134"/>
+        <image name="button_settings_bs" width="250" height="134"/>
+        <image name="camera_gray" width="28" height="28"/>
+        <image name="camera_red" width="28" height="28"/>
+        <image name="checked_green" width="22" height="22"/>
+        <image name="close_gray" width="28" height="28"/>
+        <image name="contact_gray" width="48" height="36"/>
+        <image name="cut" width="36" height="36"/>
+        <image name="cut_red" width="36" height="36"/>
+        <image name="default_user" width="100" height="100"/>
+        <image name="email_green" width="28" height="28"/>
+        <image name="email_red" width="28" height="28"/>
+        <image name="email_white" width="28" height="28"/>
+        <image name="emergency" width="90" height="90"/>
+        <image name="facebook" width="28" height="28"/>
+        <image name="facebook_gray" width="28" height="28"/>
+        <image name="facebook_white" width="28" height="28"/>
+        <image name="frequen" width="28" height="28"/>
+        <image name="gear_gray" width="50" height="50"/>
+        <image name="gift_gray" width="48" height="52"/>
+        <image name="gift_white" width="28" height="28"/>
+        <image name="home" width="28" height="28"/>
+        <image name="home_black" width="28" height="28"/>
+        <image name="home_button" width="64" height="64"/>
+        <image name="home_selected" width="28" height="28"/>
+        <image name="instagram" width="28" height="28"/>
+        <image name="instagram_gray" width="28" height="28"/>
+        <image name="instructions" width="50" height="50"/>
+        <image name="left_black" width="28" height="28"/>
+        <image name="left_gray" width="28" height="28"/>
+        <image name="linkedin_gray" width="28" height="28"/>
+        <image name="location" width="36" height="36"/>
+        <image name="lock_red" width="28" height="28"/>
+        <image name="lock_white" width="28" height="28"/>
+        <image name="logo" width="90" height="130"/>
+        <image name="mail_gray" width="28" height="28"/>
+        <image name="map_gray" width="34" height="50"/>
+        <image name="map_green" width="34" height="50"/>
+        <image name="menu_background" width="332" height="52"/>
+        <image name="message_gray" width="28" height="28"/>
+        <image name="minus_gray" width="28" height="28"/>
+        <image name="notification_alert" width="28" height="28"/>
+        <image name="notification_breaking_news" width="28" height="28"/>
+        <image name="notification_help" width="28" height="28"/>
+        <image name="notification_safety_tip" width="28" height="28"/>
+        <image name="notification_verify_email" width="28" height="28"/>
+        <image name="oval_gray" width="28" height="28"/>
+        <image name="oval_white" width="28" height="28"/>
+        <image name="padding" width="50" height="50"/>
+        <image name="pause_gray" width="28" height="28"/>
+        <image name="pause_green" width="28" height="28"/>
+        <image name="pen_gray" width="28" height="28"/>
+        <image name="pen_green" width="28" height="28"/>
+        <image name="phone_gray" width="28" height="28"/>
+        <image name="pinterest_gray" width="28" height="28"/>
+        <image name="place_ballon" width="101" height="60"/>
+        <image name="place_pin" width="27" height="37"/>
+        <image name="plus_gray" width="16" height="16"/>
+        <image name="premium_green" width="49" height="44"/>
+        <image name="profile_gray" width="43" height="50"/>
+        <image name="redo" width="36" height="36"/>
+        <image name="remove" width="28" height="28"/>
+        <image name="right_black" width="28" height="28"/>
+        <image name="right_gray" width="28" height="28"/>
+        <image name="right_white" width="28" height="28"/>
+        <image name="rigth_silver" width="16" height="28"/>
+        <image name="route_point" width="13" height="13"/>
+        <image name="route_point_red" width="13" height="13"/>
+        <image name="route_type_selector" width="117" height="36"/>
+        <image name="route_type_selector_background" width="351" height="36"/>
+        <image name="route_type_selector_bike_black" width="11" height="11"/>
+        <image name="route_type_selector_bike_gray" width="11" height="11"/>
+        <image name="route_type_selector_drive_black" width="11" height="11"/>
+        <image name="route_type_selector_drive_gray" width="11" height="11"/>
+        <image name="route_type_selector_walk_black" width="11" height="11"/>
+        <image name="route_type_selector_walk_gray" width="11" height="11"/>
+        <image name="search" width="28" height="28"/>
+        <image name="selector_left" width="339" height="36"/>
+        <image name="selector_right" width="339" height="36"/>
+        <image name="settings_gray" width="24" height="24"/>
+        <image name="share_gray" width="47" height="44"/>
+        <image name="slide_to_activate" width="375" height="667"/>
+        <image name="star_gray" width="48" height="46"/>
+        <image name="star_green" width="48" height="46"/>
+        <image name="switch_off" width="52" height="31"/>
+        <image name="switch_on" width="52" height="31"/>
+        <image name="test" width="28" height="28"/>
+        <image name="test_large" width="64" height="64"/>
+        <image name="test_selected" width="28" height="28"/>
+        <image name="text_gray" width="28" height="28"/>
+        <image name="trip_bicycling" width="50" height="50"/>
+        <image name="trip_driving" width="50" height="50"/>
+        <image name="trip_walking" width="50" height="50"/>
+        <image name="twitter" width="28" height="28"/>
+        <image name="twitter_gray" width="28" height="28"/>
+        <image name="unchecked" width="23" height="23"/>
+        <image name="undo" width="36" height="36"/>
+        <image name="upgrade_selector_left" width="588" height="64"/>
+        <image name="upgrade_selector_right" width="588" height="64"/>
+        <image name="user_ballon_red" width="70" height="77"/>
+        <image name="user_ballon_white" width="61" height="68"/>
+        <image name="user_ballon_yellow" width="70" height="77"/>
+        <image name="width_selector_background" width="45" height="316"/>
+        <image name="width_selector_pointer" width="22" height="22"/>
+        <image name="appbutton_gold" width="254" height="73"/>
+        <image name="gear_white" width="27" height="27"/>
+        <image name="waypoint_erase_red" width="44" height="44"/>
+        <image name="waypoint_erase_gray" width="44" height="44"/>
+        <image name="waypoint_delete_red" width="44" height="44"/>
+        <image name="waypoint_undo_green" width="64" height="37"/>
+        <image name="waypoint_redo_green" width="64" height="37"/>
+        <image name="waypoint_selected" width="66" height="66"/>
+        <image name="geozone_point" width="15" height="15"/>
+        <image name="search_location" width="21" height="22"/>
+        <image name="left_white" width="28" height="28"/>
+        <image name="add_photo" width="84" height="84"/>
+        <image name="page_dot_green" width="10" height="10"/>
+        <image name="page_dot_gray" width="10" height="10"/>
+        <image name="gift_green" width="22" height="22"/>
+        <image name="checked_red" width="22" height="22"/>
+        <image name="checked_yellow" width="22" height="22"/>
+        <image name="phone_white" width="21" height="21"/>
+        <image name="location_white" width="14" height="20"/>
+        <image name="box_checked" width="22" height="22"/>
+        <image name="box_unchecked" width="22" height="22"/>
+        <image name="follow_gray" width="48" height="48"/>
+        <image name="clock_gray" width="22" height="22"/>
+        <image name="question_yellow" width="22" height="22"/>
+        <image name="plus_white" width="20" height="20"/>
+        <image name="lasso" width="60" height="60"/>
+        <image name="interval" width="60" height="60"/>
+    </resources>
+</document>

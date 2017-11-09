@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:Panel xmlns:local="clr-namespace:UlziUI.Views.Panels;assembly=UlziUI" 
+             xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UlziUI.Views.Panels.StarredPlacesPanel"
+             xmlns:controls="clr-namespace:UlziUI.Controls"
+             >
+    <ContentView.Content>
+        <StackLayout
+            VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="0" Margin="0" Spacing="0">
+            <!--Navigation Bar-->
+            <StackLayout Orientation = "Horizontal"
+                      HeightRequest = "80" 
+                    HorizontalOptions = "FillAndExpand"
+                    Margin = "0" Padding = "0" BackgroundColor="#1BA4A8">
+   
+                <Frame BackgroundColor = "Transparent" 
+                    VerticalOptions = "FillAndExpand"
+                    HorizontalOptions = "FillAndExpand"
+                    HasShadow = "false"
+                    CornerRadius = "2"
+                    Padding = "5, 0, 5, 0"
+                    Margin = "10, 30, 10, 10">
+
+                    <!--//TODO: Use Grid Instead of Stack-->
+                    <StackLayout VerticalOptions = "FillAndExpand"
+                    HorizontalOptions = "FillAndExpand" 
+                        Orientation = "Horizontal" 
+                        BackgroundColor = "Transparent" Spacing = "5" Padding = "0">
+
+                        <controls:AppImage 
+                            WidthRequest = "20"
+                            VerticalOptions = "FillAndExpand"
+                            Source = "left_white"
+                            BackgroundColor = "Transparent"/>
+
+                        <controls:AppLabel
+                            Text="StarredPlaces"
+                            AppFont="Quicksand"
+                            TextColor="White"
+                            VerticalOptions = "FillAndExpand"
+                            HorizontalOptions = "FillAndExpand"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+
+                        <controls:AppImage 
+                            Source = "plus_changed_white" 
+                            VerticalOptions = "FillAndExpand" 
+                            WidthRequest = "20"
+                            BackgroundColor = "Transparent"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <!--Rest of view-->
+            <ScrollView Padding="0" Margin="0">
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Padding="0" Margin="0" Spacing="0" BackgroundColor="White">
+                    <!--Navigation Bar with Two buttons and an Entry-->
+
+                    <Grid x:Name="HeaderGrid" RowSpacing="0" VerticalOptions="FillAndExpand" Padding="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image 
+                    Source="label_background.png"
+                    Grid.Row="0"
+                    Grid.Column="0" Aspect="AspectFill"/>
+                        <controls:AppLabel x:Name="HeaderLabel" HorizontalOptions="Center" VerticalOptions="Start"  Grid.Row="0"
+                    Grid.Column="0" AppFont="Quicksand" TextColor="White" FontSize="15" Margin="35"/>
+
+                        <controls:AppLabel x:Name="ListHeaderLabel" Text = "All Starred Places"
+                                             HorizontalOptions="Start" VerticalOptions="Start"  Grid.Row="1"
+                                             Grid.Column="0" FontSize="Medium" Margin="35,25,0,0" AppFont="Quicksand"/>
+                    </Grid>
+                  
+                    <Frame HorizontalOptions = "FillAndExpand"
+                        VerticalOptions = "Fill"
+                        Margin = "10, 5, 10, 80" Padding = "10, 5, 10, 5"
+                        BackgroundColor = "White" HasShadow = "false">
+                        <StackLayout 
+                            x:Name = "StarredLocationLayout"
+                            HorizontalOptions = "FillAndExpand"
+                            VerticalOptions = "Fill">
+
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+        
+    </ContentView.Content>
+</local:Panel>

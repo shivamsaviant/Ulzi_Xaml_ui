@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>dedbae23-c410-488c-838d-6a417aef5795</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>UlziUI</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\AppConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\AppLanguages\AppLanguage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\AppLanguages\AppLanguages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\AppLanguages\EnglishAppLanguage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\BaseData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Converters\IndexToBoolConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Converters\IndexToImageConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Converters\StringIndexValueConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Enums\AppButtonStyles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Enums\AppFonts.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Enums\AppPasscodeColors.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Extensions\TaskExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Messages\LanguageSelectedMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Messages\ShowToastMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Models\PickerItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Models\StarredPlaces.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\VisualCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppCheck.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppChecked.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppDatePicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppDatePickerEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppDateSelectorEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppDateSelectorView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppEmergency.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppEntryCapitalization.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppEntryEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppEnumSelector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppEnumSelectorEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppEnumSelectorView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppImageCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppLabel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppLongTapView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppNumberSelector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppNumericKeyboard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppNumericKeyboardKey.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppPageNavigator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppPanView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppPasscodeEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppPercent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppPicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppPickerEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppSelector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppSwitch.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppTextCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppTripCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppWidthSelector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Effects\UnderlineEffect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Pages\MainViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Panels\StarredPlacesViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Pages\UlziViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Panels\LoginViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Panels\PanelViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Panels\StartViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\MainPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\UlziPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Panels\LoginPanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Panels\Panel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Panels\StarredPlacesPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Panels\StartPanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Panels\HomeSearchPanel.xaml.cs">
+      <DependentUpon>HomeSearchPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppTileButton.xaml.cs">
+      <DependentUpon>AppTileButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppHorizontalButton.xaml.cs">
+      <DependentUpon>AppHorizontalButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Models\ButtonData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Panels\HomeSearchViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Pages\TabPage.xaml.cs">
+      <DependentUpon>TabPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Pages\TabPageViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Panels\HomeSearchPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Controls\AppTileButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Controls\AppHorizontalButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Pages\TabPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Panels\StarredPlacesPanel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
